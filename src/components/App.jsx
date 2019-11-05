@@ -13,6 +13,10 @@ class App extends React.Component {
     };
   }
 
+  changeVideo(videoClicked) {
+    this.setState({video: videoClicked});
+  }
+
   render() {
     return (
       <div>
@@ -26,11 +30,12 @@ class App extends React.Component {
             <div><h5><em><VideoPlayer {...this.state} /></em></h5></div>
           </div>
           <div className="col-md-5">
-            <div><h5><em><VideoList {...this.state}/></em></h5></div>
+            <div><h5><em><VideoList {...this.state} changeVideo={this.changeVideo.bind(this)}/></em></h5></div>
           </div>
         </div>
       </div>);
   }
+
 }
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope

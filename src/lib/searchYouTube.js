@@ -7,7 +7,7 @@ var searchYouTube = (options, callback = () => {}) => {
 
 export default searchYouTube;
 
-
+window.searchYouTube = searchYouTube;
 // GET https://www.googleapis.com/youtube/v3/search
 
 

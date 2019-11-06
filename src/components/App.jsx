@@ -21,7 +21,7 @@ class App extends React.Component {
       this.setState({videos: data, video: data[0]});
     };
 
-    searchYouTube({part: 'id, snippet', q: 'tech news', maxResults: 5, key: YOUTUBE_API_KEY}, runAfterSuccess.bind(this));
+    this.props.searchYouTube({part: 'id, snippet', q: 'tech news', maxResults: 5, key: YOUTUBE_API_KEY}, runAfterSuccess.bind(this));
 
   }
 

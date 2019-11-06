@@ -12,7 +12,7 @@ class Search extends React.Component {
 
   handleChange(e) {
 
-    var debounced = _.debounce(() => this.submitSearch( this.state.input, this.props.changeVideoList), 750);
+    var debounced = _.debounce(() => this.submitSearch( this.state.input, this.props.changeVideoList), 500);
 
     this.setState({ input: e.target.value }, debounced);
   }
